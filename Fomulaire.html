@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Formulaire</title>
+  <link rel="stylesheet" type="text/css" href="formulaire.css">
+</head>
+
+<body>
+  <script language="JavaScript">
+    //La fonction JavaScript qui vérifie si les champs obligatoirs du formulaire ont été bien remplis
+    function envoie(formulaire) {
+      if ((document.getElementById('nom').value.length > 0)
+        && (document.getElementById('prenom').value.length > 0)
+        && (document.getElementById('localite').value.length > 0)
+        && (document.getElementById('email').value.length > 0)
+        && (document.getElementById('numtel').value.length > 0)
+
+      ) {
+        const dataBase = firebase.database();
+
+        /* firebase.database().ref('users/' + userId).set({
+           username: name,
+           email: email,
+           profile_picture: imageUrl
+         });
+        */
+      } else
+        alert('IMPOSSIBLE D\' ENVOER LE FORMULAIRE, VOUS AVEZ OUBLIEZ DE REMPLIRE DES CHAMPS OBLIGATOIRS');
+    }
+  </script>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 30px;
+    }
+
+    header {
+      z-index: 100px;
+      font-size: 30px;
+    }
+
+    .Style4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .Style10 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .Style11 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+  </style>
+  </head>
+
+  <body bgcolor="#FFFFFF">
+    <header>
+      <h1>Eclairage public</h1>
+    </header>
+    <hr>
+    <div align="center">
+      <p align="center" class="Style11">Formulaire d'Ajout des Technicien </p>
+      <p align="left" class="Style10">
+        <font color="#FF0000">Les cases marquées d'une * sont obligatoires </font>
+      </p>
+      <div name="form_contacts" id="form_contacts">
+        <p align="left" class="Style4">*Monsieur
+          <input type="radio" name="sex" value="Monsieur" id="sex"> Madame
+          <input type="radio" name="sex" value="madame" id="sex">
+        </p>
+        <p align="left" class="Style4">*Nom :
+          <input type="text" name="nom" id="nom">
+        </p>
+        <p align="left" class="Style4">*Prénom :
+          <input type="text" name="prenom" id="prenom">
+        </p>
+        <p align="left" class="Style4">*Localité :
+          <select name="Localité" id="localite">
+            <option></option>
+            <option>Ariana</option>
+            <option>Béja</option>
+            <option>Ben Arous</option>
+            <option>Bizerte</option>
+            <option>Gabes</option>
+            <option>Gafsa</option>
+            <option>Jendouba</option>
+            <option>Kairouan</option>
+            <option>Kasserine</option>
+            <option>Kébili</option>
+            <option>Le Kef</option>
+            <option>La Manouba</option>
+            <option>Mahdia</option>
+            <option>Médnine</option>
+            <OPTION>Monastir</OPTION>
+            <option>Nabeul</option>
+            <option>Sfax</option>
+            <option>Sidi Bouzid</option>
+            <option>Siliana</option>
+            <option>Sousse</option>
+            <option>Tataouine</option>
+            <option>Tozeur</option>
+            <option>Tunis</option>
+            <option>Zaghouan</option>
+          </select>
+        </p>
+        <p align="left" class="Style4">Num. Téléphone:
+          <input name="tel" type="text" id="numtel">
+        </p>
+
+        <p align="left">
+          <span class="Style4">*Adresse E-mail :
+            <input name="email" type="text" id="email" size="50">
+          </span>
+        </p>
+        <p align="left">
+          <input name="envoyer" type="button" id="envoyer" value="Envoyer" onClick="envoie()">
+          <input name="retablir" type="reset" id="retablir" value="Rétablir">
+        </p>
+      </div>
+      <p> </p>
+    </div>
+
+    <script src="./firebase/lib.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAwIPUzpWgX35efmBUFulRSsO22RfhtlmE",
+        authDomain: "eclairage-public.firebaseapp.com",
+        databaseURL: "https://eclairage-public.firebaseio.com",
+        projectId: "eclairage-public",
+        storageBucket: "eclairage-public.appspot.com",
+        messagingSenderId: "419441725438"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </body>
+
+</html>

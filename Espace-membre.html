@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Espace Technicien</title>
+</head>
+<body>
+	<style type="text/css">
+		<!--
+		*{padding: 0;
+margin: 0px;}
+a{text-decoration: none;}
+li{list-style: none;}
+
+/*Style du navigation*/
+.main-nav{width: 200px;
+background: #1C1C1C;
+float: left;
+}
+.main-nav a{
+	letter-spacing: .1em;
+	color: #ccc;
+	display: block;
+	padding: 10px 0 10px 20px;
+	border-bottom: 1px solid #2E2E2E;
+}
+.main-nav a:hover{background: #585858;}
+.main-nav-ul ul{display: none;}
+.main-nav-ul li:hover ul{display: block;}
+.main-nav-ul ul a:before{
+	content: '\203A';
+	margin-right: 20px;
+}
+.main-nav .sub-arrow:after{
+	content: '\203A';
+	float: right;
+	margin-right: 20px;
+	transform: rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+}
+.main-nav li:hover .sub-arrow:after{
+	content: '\2039';
+}
+header{
+	z-index: 100px;
+    font-size:30px;
+    padding: 20px 20px 10px 20px;
+}
+h2{
+	position: relative;
+	padding: 20px;
+	font-size: 30px;
+	color: darkgrey;
+	float: left;
+}
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position:relative;
+  margin-left:  300px;
+  padding-top: 150px;
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+section{
+text-align: center;}
+-->
+	</style>
+	<header>
+	<h1>Eclairage public</h1>
+	</header>
+	<hr>
+	<nav class="main-nav">
+		<ul class="main-nav-ul">
+			<li><a href="#">Ariana<span class="sub-arrow"></span></a>
+			<ul>
+				<li><a href="arianaville.html">Ariana ville</a></li>
+				<li><a href="#">Ettadhamen</a></li>
+				<li><a href="#">Kalaat Landlous</a></li>
+				<li><a href="#">La soukra</a></li>
+				<li><a href="#">Mnihla</a></li>
+				<li><a href="#">Raoued</a></li>
+				<li><a href="#">Sidi Thabet</a></li>
+			</ul>
+			</li>
+			<li><a href="#">Béja<span class="sub-arrow"></span></a>
+			<ul>
+			    <li><a href="#">Amdoun</a></li>
+				<li><a href="#">Béja Nord</a></li>
+				<li><a href="#">Goubellat</a></li>
+				<li><a href="#">Mejez Elbeb</a></li>
+				<li><a href="#">Nefza</a></li>
+				<li><a href="#">Teboursouk</a></li>
+				
+            </ul>	
+			</li>
+			<li><a href="#">Ben Arous<span class="sub-arrow"></span></a>
+			<ul>
+				<li><a href="#">Ben Arous</a></li>
+				<li><a href="#">Bou Mhel Elbassatine</a></li>
+				<li><a href="#">El Mourouj</a></li>
+				<li><a href="#">Ezzahra</a></li>
+				<li><a href="#">Fouchana</a></li>
+				<li><a href="#">Hammam Chatt</a></li>
+				<li><a href="#">Hammam Lif</a></li>
+				<li><a href="#">Megrine</a></li>
+				<li><a href="#">Mohamdia</a></li>
+				<li><a href="#">Mornag</a></li>
+				<li><a href="#">Nouvelle Medina</a></li>
+				<li><a href="#">Rades</a></li>
+
+			</ul>	
+			</li>
+
+			<li><a href="#">Bizerte<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Bizerte Nord</a></li>
+				<li><a href="#">Bizerte Sud</a></li>
+				<li><a href="#">El Alia</a></li>
+				<li><a href="#">Ghar El Meleh</a></li>
+				<li><a href="#">Ghezala</a></li>
+				<li><a href="#">Jarzouna</a></li>
+				<li><a href="#">Joumine</a></li>
+				<li><a href="#">Mateur</a></li>
+				<li><a href="#">Menzel Bourguiba</a></li>
+				<li><a href="#">Menzel Jemil</a></li>
+				<li><a href="#">Ras Jebel</a></li>
+				<li><a href="#">Sejnane</a></li>
+				<li><a href="#">Tinja</a></li>
+				<li><a href="#">Utique</a></li>	
+				</ul>
+			</li>
+
+			<li><a href="#">Gabes<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">El Hamma</a></li>
+				<li><a href="#">El Metouia</a></li>
+				<li><a href="#">Gabes Medina</a></li>
+				<li><a href="#">Gabes Ouest</a></li>
+				<li><a href="#">Gabes Sud</a></li>
+				<li><a href="#">Ghannouche</a></li>
+				<li><a href="#">Mareth</a></li>
+				<li><a href="#">Matmata</a></li>
+				<li><a href="#">Menzel Habib</a></li>
+				<li><a href="#">Nouvelle Matmata</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="#">Gafsa<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Belkhir</a></li>
+				<li><a href="#">El Guettar</a></li>
+				<li><a href="#">El Ksar</a></li>
+				<li><a href="#">El Mdhilla</a></li>
+				<li><a href="#">Gafsa Nord</a></li>
+				<li><a href="#">Gafsa Sud</a></li>
+				<li><a href="#">Metlaoui</a></li>
+				<li><a href="#">Moulares</a></li>
+				<li><a href="#">Redeyef</a></li>
+				<li><a href="#">Sidi Aich</a></li>
+				<li><a href="#">Sned</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="#">Jendouba<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Ain Drahem</a></li>
+				<li><a href="#">Balta Bou Aouene</a></li>
+				<li><a href="#">Bou Salem</a></li>
+				<li><a href="#">Fernana</a></li>
+				<li><a href="#">Ghardimaou</a></li>
+				<li><a href="#">Jendouba</a></li>
+				<li><a href="#">Jendouba Nord</a></li>
+				<li><a href="#">Oued Mliz</a></li>
+				<li><a href="#">Tabarka</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="#">Kairouan<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Bou Hajla</a></li>
+				<li><a href="#">Chebika</a></li>
+				<li><a href="#">Cherarda</a></li>
+				<li><a href="#">El Ala</a></li>
+				<li><a href="#">Haffouz</a></li>
+				<li><a href="#">Hajeb El Ayoun</a></li>
+				<li><a href="#">Kairouan Nord</a></li>
+				<li><a href="#">Kairouan Sud</a></li>
+				<li><a href="#">Nasrallah</a></li>
+				<li><a href="#">Oueslatia</a></li>
+				<li><a href="#">Sbikha</a></li>
+					
+				</ul>
+			</li>
+
+			<li><a href="#">Kasserine<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">El Ayoun</a></li>
+				<li><a href="#">Ezzouhour</a></li>
+				<li><a href="#">Feriana</a></li>
+				<li><a href="#">Foussana</a></li>
+				<li><a href="#">Haidra</a></li>
+				<li><a href="#">Hassi El Frid</a></li>
+				<li><a href="#">Jediliane</a></li>
+				<li><a href="#">Kasserine Nord</a></li>
+				<li><a href="#">Kasserine Sud</a></li>
+				<li><a href="#">Mejel Bel Abbes</a></li>
+				<li><a href="#">Sbeitla</a></li>
+				<li><a href="#">Sbiba</a></li>
+				<li><a href="#">Thala</a></li>
+					
+				</ul>
+			</li>
+
+			<li><a href="#">Kébili<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Douz</a></li>
+				<li><a href="#">El Faouar</a></li>
+				<li><a href="#">Kebili Nord</a></li>
+				<li><a href="#">Kebili Sud</a></li>
+				<li><a href="#">Souk El Ahad</a></li>
+					
+				</ul>
+			</li>
+
+			<li><a href="#">Le Kef<span class="sub-arrow"></span></a>
+				<ul>
+					<li><a href="#">Dahmani</a></li>
+				<li><a href="#">El Ksour</a></li>
+				<li><a href="#">Jerissa</a></li>
+				<li><a href="#">Kalaa El Khasba</a></li>
+				<li><a href="#">Kalaat Sinane</a></li>
+				<li><a href="#">Le Kef Est</a></li>
+				<li><a href="#">Le Kef Ouest</a></li>
+				<li><a href="#">Sers</a></li>
+				<li><a href="#">Nebeur</a></li>
+				<li><a href="#">Sakiet Sidi Youssef</a></li>
+				<li><a href="#">Tajerouine</a></li>
+				<li><a href="#">Touiref</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="#">Mahdia<span class="sub-arrow"></a>
+				<ul>
+				<li><a href="#">Bou Merdes</a></li>
+				<li><a href="#">Chorbane</a></li>
+				<li><a href="#">El Jem</a></li>
+				<li><a href="#">Hbira</a></li>
+				<li><a href="#">Ksour Essaf</a></li>
+				<li><a href="#">La Chebba</a></li>
+				<li><a href="#">Mahdia</a></li>
+				<li><a href="#">Melloulech</a></li>
+				<li><a href="#">Ouled Chamakh</a></li>
+				<li><a href="#">Sidi Alouene</a></li>
+				<li><a href="#">Souassi</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="#">La Manouba<span class="sub-arrow"></span></a>
+					<ul>
+					<li><a href="#">Borj El Amri</a></li>
+				<li><a href="#">Douar Hicher</a></li>
+				<li><a href="#">El Battan</a></li>
+				<li><a href="#">Jedaida</a></li>
+				<li><a href="#">Mannouba</a></li>
+				<li><a href="#">Mornaguia</a></li>
+				<li><a href="#">Oued Ellil</a></li>
+				<li><a href="#">Tebourba</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="#">Médenine<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Ajim</a></li>
+				<li><a href="#">Ben Guerdane</a></li>
+				<li><a href="#">Beni Khedache</a></li>
+				<li><a href="#">Houmet Essouk</a></li>
+				<li><a href="#">Medenine Nord</a></li>
+				<li><a href="#">Medenine Sud</a></li>
+				<li><a href="#">Midoun</a></li>
+				<li><a href="#">Sidi Makhlouf</a></li>
+				<li><a href="#">Zarzis</a></li>	
+				</ul>
+			</li>
+			<li><a href="#">Monastir<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Bekalta</a></li>
+				<li><a href="#">Bembla</a></li>
+				<li><a href="#">Beni Hassen</a></li>
+				<li><a href="#">Jemmal</a></li>
+				<li><a href="#">Ksar Helal</a></li>
+				<li><a href="#">Ksibet El Mediouni</a></li>
+				<li><a href="#">Moknine</a></li>
+				<li><a href="#">Monastir</a></li>
+				<li><a href="#">Ouerdanine</a></li>
+				<li><a href="#">Sahline</a></li>
+				<li><a href="#">Sayada Lamta Bou Hajar</a></li>
+				<li><a href="#">Teboulba</a></li>
+				<li><a href="#">Zeramdine</a></li>	
+				</ul>
+			</li>
+			<li><a href="#">Nabeul<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Beni Khalled</a></li>
+				<li><a href="#">Beni Khiar</a></li>
+				<li><a href="#">Bou Argoub</a></li>
+				<li><a href="#">Dar Chaabane Elfehri</a></li>
+				<li><a href="#">El Haouaria</a></li>
+				<li><a href="#">El Mida</a></li>
+				<li><a href="#">Grombalia</a></li>
+				<li><a href="#">Hammam El Ghezaz</a></li>
+				<li><a href="#">Hammamet</a></li>
+				<li><a href="#">Kelibia</a></li>
+				<li><a href="#">Korba</a></li>
+				<li><a href="#">Menzel Bouzelfa</a></li>
+				<li><a href="#">Menzel Temime</a></li>
+				<li><a href="#">Nabeul</a></li>
+				<li><a href="#">Soliman</a></li>
+				<li><a href="#">Takelsa</a></li>
+				<li><a href="#">Menzel Temime</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Sfax<span class="sub-arrow"></span></a>
+				<ul>
+					<li><a href="#">Agareb</a></li>
+				<li><a href="#">Bir Ali Ben Khelifa</a></li>
+				<li><a href="#">El Amra</a></li>
+				<li><a href="#">El Hencha</a></li>
+				<li><a href="#">Esskhira</a></li>
+				<li><a href="#">Ghraiba</a></li>
+				<li><a href="#">Jebeniana</a></li>
+				<li><a href="#">Kerkenah</a></li>
+				<li><a href="#">Mahras</a></li>
+				<li><a href="#">Menzel Chaker</a></li>
+				<li><a href="#">Sakiet Eddaier</a></li>
+				<li><a href="#">Sfax Est</a></li>
+				<li><a href="#">Sfax Ville</a></li>
+				<li><a href="#">Sakiet Ezzit</a></li>
+				<li><a href="#">Sfax Sud</a></li>	
+				</ul>
+			</li>
+			<li><a href="#">Sidi Bouzid<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Ben Oun</a></li>
+				<li><a href="#">Bir El Haffey</a></li>
+				<li><a href="#">Cebbala</a></li>
+				<li><a href="#">Jilma</a></li>
+				<li><a href="#">Maknassy</a></li>
+				<li><a href="#">Menzel Bouzaiene</a></li>
+				<li><a href="#">Mezzouna</a></li>
+				<li><a href="#">Ouled Haffouz</a></li>
+				<li><a href="#">Regueb</a></li>
+				<li><a href="#">Sidi Bouzid Est</a></li>
+				<li><a href="#">Sidi Bouzid Ouest</a></li>
+				<li><a href="#">Souk Jedid</a></li>
+				</ul>
+					
+			</li>
+			<li><a href="#">Siliana<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Bargou</a></li>
+				<li><a href="#">Bou Arada</a></li>
+				<li><a href="#">El Aroussa</a></li>
+				<li><a href="#">Gaafour</a></li>
+				<li><a href="#">Kesra</a></li>
+				<li><a href="#">Le Krib</a></li>
+				<li><a href="#">Makthar</a></li>
+				<li><a href="#">Rohia</a></li>
+				<li><a href="#">Sidi Bou Rouis</a></li>
+				<li><a href="#">Siliana Nord</a></li>
+				<li><a href="#">Siliana Sud</a></li>	
+				</ul>
+			</li>
+
+			<li><a href="#">Sousse<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Akouda</a></li>
+				<li><a href="#">Bou Ficha</a></li>
+				<li><a href="#">Enfidha</a></li>
+				<li><a href="#">Hammam Sousse</a></li>
+				<li><a href="#">Hergla</a></li>
+				<li><a href="#">Kalaa El Kebira</a></li>
+				<li><a href="#">Kalaa Essghira</a></li>
+				<li><a href="#">Kondar</a></li>
+				<li><a href="#">Msaken</a></li>
+				<li><a href="#">Sidi Bou Ali</a></li>
+				<li><a href="#">Sidi El Heni</a></li>
+				<li><a href="#">Sousse Jaouhara</a></li>
+				<li><a href="#">Sousse Riadh</a></li>
+				<li><a href="#">Sousse Ville</a></li>	
+				</ul>
+			</li>
+
+			<li><a href="#">Tataouine<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Bir Lahmar</a></li>
+				<li><a href="#">Dhehiba</a></li>
+				<li><a href="#">Ghomrassen</a></li>
+				<li><a href="#">Remada</a></li>
+				<li><a href="#">Smar</a></li>
+				<li><a href="#">Tataouine Nord</a></li>
+				<li><a href="#">Tataouine Sud</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="#">Tozeur<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Degueche</a></li>
+				<li><a href="#">Hezoua</a></li>
+				<li><a href="#">Nefta</a></li>
+				<li><a href="#">Tameghza</a></li>
+				<li><a href="#">Tozeur</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Tunis<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Bab Bhar</a></li>
+				<li><a href="#">Bab Souika</a></li>
+				<li><a href="#">Carthage</a></li>
+				<li><a href="#">Cite El Khadra</a></li>
+				<li><a href="#">El Hrairia</a></li>
+				<li><a href="#">El Kabbaria</a></li>
+				<li><a href="#">El Kram</a></li>
+				<li><a href="#">El Menzah</a></li>
+				<li><a href="#">El Omrane</a></li>
+				<li><a href="#">El Omrane Superieur</a></li>
+				<li><a href="#">El Ouerdia</a></li>
+				<li><a href="#">Essijoumi</a></li>
+				<li><a href="#">Ettahrir</a></li>
+				<li><a href="#">Ezzouhour</a></li>
+				<li><a href="#">Jebel Jelloud</a></li>
+				<li><a href="#">La Goulette</a></li>
+				<li><a href="#">La Marsa</a></li>
+				<li><a href="#">La Medina</a></li>
+				<li><a href="#">Le Bardo</a></li>
+				<li><a href="#">Sidi El Bechir</a></li>
+				<li><a href="#">Sidi Hassine</a></li>	
+				</ul>
+			</li>
+			<li><a href="#">Zaghouan<span class="sub-arrow"></span></a>
+				<ul>
+				<li><a href="#">Bir Mcherga</a></li>
+				<li><a href="#">El Fahs</a></li>
+				<li><a href="#">Ennadhour</a></li>
+				<li><a href="#">Hammam Zriba</a></li>
+				<li><a href="#">Saouef</a></li>
+				<li><a href="#">Zaghouan</a></li>
+				</ul>
+			</li>
+
+
+		</ul>
+		
+	</nav>
+	<section>
+		<h2>Espace Technicien</h2>
+	</section>
+	<section>
+	<div class="slideshow-container">
+
+        <div class="mySlides fade">
+ 			<img src="PFE IoT/3.jpg" style="width:800px; height: 400px">
+		</div>
+
+		<div class="mySlides fade">
+ 			<img src="PFE IoT/eclairage.jpg" style="width:800px; height: 400px">
+		</div>
+
+		<div class="mySlides fade">
+		  <img src="PFE IoT/smart.jpg" style="width:800px; height: 400px">
+		</div>
+		<div class="mySlides fade">
+		  <img src="PFE IoT/led.jpg" style="width:800px; height: 400px">
+		</div>
+		<div class="mySlides fade">
+		  <img src="PFE IoT/objet.jpg" style="width:800px; height: 400px">
+		</div>
+		<div class="mySlides fade">
+		  <img src="PFE IoT/led.jpg" style="width:800px; height: 400px">
+		</div>
+		<div class="mySlides fade">
+		  <img src="PFE IoT/lampe.jpg" style="width:800px; height: 400px">
+		</div>
+		<div class="mySlides fade">
+		  <img src="PFE IoT/iot.jpg" style="width:800px; height: 400px">
+		</div>
+	</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+</section>
+
+<script>
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>

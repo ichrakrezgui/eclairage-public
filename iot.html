@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+  <div id="login_div" class="loginbox">
+    <img src="avatar.png" class="avatar">
+    <h1>Se connecter</h1>
+    <div>
+      <p>Adresse E-mail</p>
+      <input id="txtEmail" type="text" name="E-mail" placeholder="Entrer votre E-mail">
+      <p>Mot de passe</p>
+      <input id="pwd" type="password" name="Password" placeholder="Entrer votre mot de passe">
+      <p>Statut</p>
+      <br>
+      <select name="type" id="choose">
+        <option value="1">--------</option>
+        <option value="Admin">Administrateur</option>
+        <option value="Technicien">Technicien</option>
+      </select>
+      <br>
+      <br>
+      <button id="loginButton">Connexion</button>
+      <br>
+      <br>
+      <a href="#">Mot de passe oublié?</a>
+      <br>
+
+    </div>
+
+  </div>
+  <section>
+    <div id="user_div" class="loggedin_div">
+      <h3>Bienvenue </h3>
+      <button id="user_para">logout</button>
+
+    </div>
+  </section>
+
+
+  <script src="./firebase/lib.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAwIPUzpWgX35efmBUFulRSsO22RfhtlmE",
+      authDomain: "eclairage-public.firebaseapp.com",
+      databaseURL: "https://eclairage-public.firebaseio.com",
+      projectId: "eclairage-public",
+      storageBucket: "eclairage-public.appspot.com",
+      messagingSenderId: "419441725438"
+    };
+    firebase.initializeApp(config);
+  </script>
+    <script src="iot.js"></script>
+    <script>
+      function initApp() {
+        document.getElementById('loginButton')
+          .addEventListener('click', Login);
+      }
+  
+      window.onload = function () {
+        initApp();
+      }
+    </script>
+</body>
+
+</html>
