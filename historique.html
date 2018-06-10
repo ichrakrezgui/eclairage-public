@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="villestyle.css">
+    <title>historique</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: rgb(76, 85, 76);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Eclairage public</h1>
+    </header>
+    <hr>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="arianaville.html">Notifications</a>
+            </li>
+            <li>
+                <a href="historique.html">Historique</a>
+            </li>
+            <li>
+                <a href="localisation.html">Localisation</a>
+            </li>
+            <li>
+                <a href="lampe.html">Ajouter de nouveaux lampadaires</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Historique</h2>
+        <table id="table">
+            <tr>
+                <th>Lampe [id]</th>
+                <th>Etat</th>
+                <th>Date et Temps</th>
+            </tr>
+
+            <!-- DATA ROWS WILL BE INSERTED HERE BY JavaScript -->
+        </table>
+
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+    <script src="./firebase/lib.js"></script>
+
+    <script>
+
+
+        // Initialize Firebase
+        const config = {
+            apiKey: "AIzaSyAwIPUzpWgX35efmBUFulRSsO22RfhtlmE",
+            authDomain: "eclairage-public.firebaseapp.com",
+            databaseURL: "https://eclairage-public.firebaseio.com",
+            projectId: "eclairage-public",
+            storageBucket: "eclairage-public.appspot.com",
+            messagingSenderId: "419441725438"
+        };
+        let table = null;
+
+        firebase.initializeApp(config);
+
+        const ref = firebase.database().ref('lampes');
+
+        /**
+            Convert Firebase 'lampes' object to an array with this format:
+            [
+                {
+                    date: "07/06/18 19:03",
+​                    etat: "eteinte",
+​                    nom: "lampe1"
+                },
+                . . .
+            ]
+        */
+        const convertLampesObj = lampes =>
+            Object.entries(lampes)
+                .map(([nom, { id, LampeLum, date }]) => ({ nom, etat: LampeLum, date }));
+
+
+        const generateRowsTemplate = rowsData => rowsData.map(({ nom, etat, date }) =>
+            `<tr class="lampe-row">
+            <td>${nom}</td>
+            <td>${etat === 'en panne' ? etat : ''}</td>
+            <td>${date}</td>
+        </tr>`);
+
+        ref.on('value', (snapshot) => {
+            removeElementsByClass('lampe-row');
+
+            const lampesObj = snapshot.val();
+
+            const rowsData = convertLampesObj(lampesObj);
+
+            const rowsTemplate = generateRowsTemplate(rowsData);
+
+            const DOMTable = document.getElementById('table');
+
+            for (const rowTmp of rowsTemplate) {
+                DOMTable.insertAdjacentHTML('beforeend', rowTmp);
+            }
+        });
+
+        function removeElementsByClass(className) {
+            const elements = document.getElementsByClassName(className);
+            while (elements.length > 0) {
+                elements[0].parentNode.removeChild(elements[0]);
+            }
+        }
+    </script>
+</body>
+
+</html>
